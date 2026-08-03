@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lily's Cattery | British Shorthair Kittens North Carolina</title>
+
+<meta name="description"
+      content="TICA Registered British Shorthair breeder in Charlotte, North Carolina specializing in healthy, well-socialized kittens.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+<style>
+
+:root{
+    --gold:#eb9f242f;
+    --gold-dark:#b8904f;
+    --dark:#1f2937;
+    --light:#f8fafc;
+    --white:#ffffff;
+    --text:#4b5563;
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:90px 0;
+}
+
+h1,h2,h3{
+    color:var(--dark);
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    z-index:1000;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+    color:var(--gold);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('images/hero.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    max-width:800px;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    color:white;
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--gold);
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--gold-dark);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-grid img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.parents,
+.kitten-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.parent-card,
+.kitten-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.parent-card img,
+.kitten-card img{
+    width:100%;
+    object-fit:cover;
+}
+
+.parent-card img{
+    height:400px;
+}
+
+.kitten-card img{
+    height:280px;
+}
+
+.parent-content,
+.kitten-content{
+    padding:25px;
+}
+
+.status{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.available{
+    background:#ecfdf5;
+    color:#047857;
+}
+
+.reserved{
+    background:#fff7ed;
+    color:#ea580c;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:16px;
+    box-shadow:var(--shadow);
+}
+
+.contact-box{
+    background:white;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    text-align:center;
+}
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#d1d5db;
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero-content h1{
+        font-size:2.6rem;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+
+        <div class="logo">Lily's Cattery</div>
+
+        <nav>
+            <ul>
+                <li>#aboutAbout</a></li>
+                <li>#catsOur Cats</a></li>
+                <li>#kittensKittens</a></li>
+                <li>#galleryGallery</a></li>
+                <li>#contactContact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>British Shorthair Kittens</h1>
+
+        <p>
+            TICA Registered British Shorthair breeder located in
+            Charlotte, North Carolina.
+        </p>
+
+        #kittens
+            View Available Kittens
+        </a>
+
+    </div>
+
+</section>
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About Lily's Cattery</h2>
+        </div>
+
+        <div class="about-grid">
+
+            <img src="images/rockyandlily.jpg" alt="Rocky and Lily">
+
+            <div>
+
+                <p>
+                    Welcome to Lily's Cattery. We specialize in raising
+                    healthy, affectionate, and beautiful British Shorthair kittens.
+                </p>
+
+                <p>
+                    Our kittens are raised in a loving home environment and
+                    receive daily interaction and socialization.
+                </p>
+
+                <p>
+                    We focus on health, temperament, and breed quality.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="container">
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>TICA Registered</h3>
+                <p>Responsible pedigree breeding program.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Health Focused</h3>
+                <p>Raised with veterinary guided care.</p>
+            </div>
+
+            <div class="feature">
+                <h3>Home Raised</h3>
+                <p>Socialized daily with family interaction.</p>
+            </div>
+
+    </div>
+
+</section>
+
+<section id="cats">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Meet Our Cats</h2>
+        </div>
+
+        <div class="parents">
+
+            <div class="parent-card">
+
+                <img src="images/queen-lily.jpg" alt="Queen Lily">
+
+                <div class="parent-content">
+                    <h3>Queen Lily</h3>
+                    <p>Sweet, affectionate British Shorthair queen.</p>
+                </div>
+
+            </div>
+
+            <div class="parent-card">
+
+                <img src="images/sire.jpg" alt="Stud Male">
+
+                <div class="parent-content">
+                    <h3>Stud Male</h3>
+                    <p>Exceptional structure and temperament.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="kittens">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Available Kittens</h2>
+        </div>
+
+        <div class="kitten-grid">
+
+            <div class="kitten-card">
+
+                <img src="images/kitten1.jpg" alt="Golden British Shorthair Princess (Female)">
+
+                <div class="kitten-content">
+                    <h3>Golden British Shorthair Princess (Female)</h3>
+                    <p>Born May 2026</p>
+                    <br>
+                    <span class="status available">Available</span>
+                </div>
+
+            </div>
+
+            <div class="kitten-card">
+
+                <img src="images/kitten2.jpg" alt="Blue Golden British Shorthair Male">
+
+                <div class="kitten-content">
+                    <h3>Blue Golden British Shorthair Male</h3>
+                    <p>Born May 2026</p>
+                    <br>
+                    <span class="status available">Available</span>
+                </div>
+
+            </div>
+            <div class="kitten-card">
+
+                <img src="images/kitten3.jpg" alt="Blue Golden British Shorthair Male">
+
+                <div class="kitten-content">
+                    <h3>Blue Golden British Shorthair Male</h3>
+                    <p>Born May 2026</p>
+                    <br>
+                    <span class="status reserved">Reserved for future breeding</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Gallery</h2>
+        </div>
+
+        <div class="gallery">
+
+            <img src="images/gallery1.jpg" alt="Gallery 1">
+            <img src="images/gallery2.jpg" alt="Gallery 2">
+            <img src="images/gallery3.jpg" alt="Gallery 3">
+            <img src="images/gallery4.jpg" alt="Gallery 4">
+           
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <h2>Contact Lily's Cattery</h2>
+            <img src="/images/owners.jpg" alt="Owners">
+            <p>Charlotte, North Carolina</p>
+            <p>Email: sjoseph704@icloud.com</p>
+            <p>Instagram: @chung.sm</p>
+            <p>Facebook: https://www.facebook.com/nagasakki7/  </p>
+
+            <br>
+
+            <a href="mailto:sjoseph704@icloud.com" class="btn">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>Lily's Cattery</h3>
+
+    <p>British Shorthair Kittens • Charlotte, NC</p>
+
+    <p>© 2026 Lily's Cattery</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+:root{
+    --gold:#caa56a;
+    --gold-dark:#b8904f;
+    --dark:#1f2937;
+    --light:#f8fafc;
+    --white:#ffffff;
+    --text:#4b5563;
+    --shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.7;
+}
+
+/* ==========================
+   Layout
+========================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:90px 0;
+}
+
+h1,h2,h3{
+    color:var(--dark);
+    font-weight:700;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+}
+
+.section-title p{
+    color:#6b7280;
+}
+
+/* ==========================
+   Header
+========================== */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:white;
+    z-index:999;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-size:2rem;
+    color:var(--gold);
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/* ==========================
+   Hero
+========================== */
+
+.hero{
+    height:100vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.50),
+        rgba(0,0,0,.50)
+    ),
+    url('images/hero.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    max-width:900px;
+    color:white;
+}
+
+.hero-content h1{
+    color:white;
+    font-size:4rem;
+    margin-bottom:25px;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    margin-bottom:40px;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.btn{
+    display:inline-block;
+    background:var(--gold);
+    color:white;
+    text-decoration:none;
+    padding:16px 35px;
+    border-radius:999px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--gold-dark);
+    transform:translateY(-2px);
+}
+
+/* ==========================
+   About Section
+========================== */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-grid img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.about-grid p{
+    margin-bottom:15px;
+}
+
+/* ==========================
+   Feature Cards
+========================== */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:white;
+    padding:35px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+}
+
+.feature h3{
+    margin-bottom:10px;
+}
+
+/* ==========================
+   Parent Cats
+========================== */
+
+.parents{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.parent-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.parent-card img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+}
+
+.parent-content{
+    padding:25px;
+}
+
+/* ==========================
+   Kitten Cards
+========================== */
+
+.kitten-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.kitten-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.3s;
+}
+
+.kitten-card:hover{
+    transform:translateY(-8px);
+}
+
+.kitten-card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.kitten-content{
+    padding:20px;
+}
+
+.status{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.available{
+    background:#ecfdf5;
+    color:#047857;
+}
+
+.reserved{
+    background:#fff7ed;
+    color:#ea580c;
+}
+
+/* ==========================
+   Gallery
+========================== */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    border-radius:16px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* ==========================
+   Adoption Process
+========================== */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.step{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.step-number{
+    font-size:2rem;
+    font-weight:700;
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+/* ==========================
+   Contact
+========================== */
+
+.contact-box{
+    background:white;
+    text-align:center;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.contact-box p{
+    margin-bottom:10px;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#d1d5db;
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero-content h1{
+        font-size:2.6rem;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:60px 0;
+    }
+}
